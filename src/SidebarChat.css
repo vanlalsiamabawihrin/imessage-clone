@@ -1,0 +1,27 @@
+.sidebarChat {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid lightgrey;
+}
+.sidebarChat__info {
+  margin-left: 15px;
+  position: relative;
+  width: 100%;
+}
+.sidebarChat__info > small {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+.sidebarChat:hover {
+  background-color: #3e93fd;
+  color: white;
+}
+.sidebar__chats {
+  overflow: scroll;
+}
+.sidebar__chats::-webkit-scrollbar {
+  display: none;
+}
