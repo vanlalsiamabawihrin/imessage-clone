@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    value: null,
+    user: null,
   },
   reducers: {
     login: (state, action) => {
@@ -15,14 +15,8 @@ export const userSlice = createSlice({
   },
 });
 
-export const { login, logout, incrementByAmount } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 
-export const incrementAsync = (amount) => (dispatch) => {
-  setTimeout(() => {
-    dispatch(incrementByAmount(amount));
-  }, 1000);
-};
-
-export const selectUser = (state) => state.counter.value;
+export const selectUser = (state) => state.user.user;
 
 export default userSlice.reducer;
